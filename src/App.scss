@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+/***** THEME 1 *********/
+/***** BACKGROUNDS *****/
+$very-dark-desaturated-blue-main: hsl(222, 26%, 31%);
+$very-dark-desaturated-blue-btn: hsl(223, 31%, 20%);    // toggle, keypad
+$very-dark-desaturated-blue-screen: hsl(224, 36%, 15%);
+
+/***** KEYS ************/
+$desaturated-dark-blue-key-bg: hsl(225, 21%, 49%);
+$desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
+$red: hsl(6, 63%, 50%);                                 // key background, toggle
+$dark-red: hsl(6, 70%, 34%);                            // key shadow
+$light-grayish-orange: hsl(30, 25%, 89%);               // key background
+$grayish-orange: hsl(28, 16%, 65%);                     // key, shadow
+
+/***** TEXT ************/
+$very-dark-grayish-blue: hsl(221, 14%, 31%);
+$white: hsl(0, 0, 100%);
+
+/***** Theme 2 **********/
+/*****  Backgrounds *****/
+$light-gray-main: hsl(0, 0%, 90%); // main
+$grayish-red: hsl(0, 5%, 81%);             // toggle, keypad
+$very-light-gray: hsl(0, 0%, 93%);  // screen
+
+/***** Keys *************/
+$dark-moderate-cyan: hsl(185, 42%, 37%);   // background
+$very-dark-cyan: hsl(185, 58%, 25%);       // shadow
+$orange-key: hsl(25, 98%, 40%);            // toggle
+$dark-orange: hsl(25, 99%, 27%);           // shadow
+$light-grayish-yellow: hsl(45, 7%, 89%);   // background
+$dark-grayish-orange: hsl(35, 11%, 61%);   // shadow
+
+/***** Text ************/
+$very-dark-grayish-yellow: hsl(60, 10%, 19%);
+
+/***** Theme 3 *********/
+/***** Backgrounds *****/
+$very-dark-violet-main: hsl(268, 75%, 9%);
+$very-dark-violet: hsl(268, 71%, 12%); // toggle, keypad, screen
+
+/***** Keys ************/
+$dark-violet: hsl(281, 89%, 26%);  // background
+$vivid-magenta: hsl(285, 91%, 52%);               // shadow
+$pure-cyan: hsl(176, 100%, 44%);                  // key, toggle, background
+$soft-cyan: hsl(177, 92%, 70%);                   // shadow
+$very-dark-violet-key: hsl(268, 47%, 21%);            // background
+$dark-magenta: hsl(290, 70%, 36%);                // shadow
+
+/***** Text ************/
+$light-yellow: hsl(52, 100%, 62%);
+$very-dark-blue: hsl(198, 20%, 13%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  color: $white;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+}
+
+.app {
+  @mixin theme(
+    $main-color,
+    $text-color, 
+    $toggle-color, 
+    $switch-color, 
+    $screen-color, 
+    $keypad-color, 
+    $default-button-color, 
+    $default-shadow-color, 
+    $default-key-color,
+    $clear-button-color, 
+    $clear-shadow-color, 
+    $clear-key-color,
+    $equal-button-color, 
+    $equal-shadow-color, 
+    $equal-key-color
+  ) {
+    background-color: $main-color;
+    color: $text-color;
+
+    .theme__toggle__switch {
+      background-color: $toggle-color;
+      input:checked ~ .checkmark {
+        background-color: $switch-color;
+      }
+    }
+
+    .screen {
+      background-color: $screen-color;
+    }
+
+    .keypad {
+      background-color: $keypad-color;
+    }
+
+    .btn {
+
+      background-color: $default-button-color;
+      box-shadow: 0 4px $default-shadow-color;
+      color: $default-key-color;
+
+      &.pressed {
+        box-shadow: 0 4px $default-button-color;
+      }
+
+      &.clear {
+        background-color: $clear-button-color;
+        box-shadow: 0 4px $clear-shadow-color;
+        color: $clear-key-color;
+
+        &.pressed {
+          box-shadow: 0 4px $clear-button-color;
+        }
+      }
+
+      &.equal {
+        background-color: $equal-button-color;
+        box-shadow: 0 4px $equal-shadow-color;
+        color: $equal-key-color;
+
+        &.pressed {
+          box-shadow: 0 4px $equal-button-color;
+        }
+      }
+    }
+  }
+
+  &.theme-1 {
+    @include theme(
+    $very-dark-desaturated-blue-main, 
+    $white, 
+    $very-dark-desaturated-blue-btn,
+    $red,
+    $very-dark-desaturated-blue-screen,
+    $very-dark-desaturated-blue-btn,
+    $light-grayish-orange,
+    $grayish-orange,
+    $very-dark-grayish-blue,
+    $desaturated-dark-blue-key-bg,
+    $desaturated-dark-blue-key-shadow,
+    $white,
+    $red,
+    $dark-red,
+    $white
+    );
+  }
+
+  &.theme-2 {
+    @include theme(
+    $light-gray-main,
+    $very-dark-grayish-yellow,
+    $grayish-red,
+    $orange-key,
+    $very-light-gray,
+    $grayish-red,
+    $light-grayish-yellow,
+    $dark-grayish-orange,
+    $very-dark-grayish-yellow,
+    $dark-moderate-cyan,
+    $very-dark-cyan,
+    $white,
+    $orange-key,
+    $dark-orange,
+    $white
+    );
+  }
+
+  &.theme-3 {
+    @include theme(
+    $very-dark-violet-main,
+    $light-yellow,
+    $very-dark-violet,
+    $pure-cyan,
+    $very-dark-violet,
+    $very-dark-violet,
+    $very-dark-violet-key,
+    $dark-magenta,
+    $light-yellow,
+    $dark-violet,
+    $vivid-magenta,
+    $white,
+    $pure-cyan,
+    $soft-cyan,
+    $dark-violet
+    );
+  }
+}
+
+main {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 1.5em;
+}
+
+.theme {
+  display: grid;
+  margin-bottom: 2em;
+  font-size: .8rem;
+  justify-items: center;
+  align-items: center;
+  column-gap: .75em;
+  row-gap: 7%;
+  grid-template-columns: repeat(2, 70px);
+  grid-template-rows: repeat(2, 28px);
+  grid-template-areas:
+  "  .  number"
+  "text toggle";
+
+  &__container {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__text {
+    grid-area: text;
+  }
+
+  &__number {
+    grid-area: number;
+    align-self: end;
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+
+    & > p:first-child {
+      margin-right: auto;
+    }
+
+    & > p:nth-child(2) {
+      margin: 0 auto;
+    }
+
+    & > p:last-child {
+      margin-left: auto;
+    }
+  }
+
+  &__toggle {
+    grid-area: toggle;
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+
+    &__switch {
+      border-radius: 5em;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      height: 90%;
+
+      label {
+        position: relative;
+        cursor: pointer;
+        max-height: 25.2px;
+
+        &:first-child > .checkmark {
+          transform: translate(-40%, -50%);
+        }
+
+        &:last-child > .checkmark {
+          transform: translate(-60%, -50%);
+        }
+      }
+
+      input {
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .checkmark {
+        $height: 65%;
+        opacity: 1;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: calc($height * 1.0775);
+        height: $height;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.screen {
+  height: 85px;
+  border-radius: .5em;
+  padding-right: 1.5em;
+
+  #label {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 2rem;
+    height: 100%;
+  }
+}
+
+.keypad {
+  border-radius: .5em;
+  padding: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 60px);
+  column-gap: .8em;
+  row-gap: 1.1em;
+}
+
+.btn {
+
+  border-radius: 4px;
+  padding-top: 4px;
+
+  &.default {
+    font-size: 2.1rem;
+  }
+
+  &:nth-child(17), &:nth-child(18) {
+    grid-column-start: span 2;
+  }
+}
+
+.attribution {
+  text-align: center;
+}
