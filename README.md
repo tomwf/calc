@@ -7,42 +7,29 @@ This is a simple calculator app in which the user can switch between 3 themes.
 ## Table of contents
 
 - [How to use](#how-to-use)
-  - [Development modde](#development-mode)
 - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
+- [Built with](#built-with)
 - [Author](#author)
 
 ## How to use
 
 In the project directory, you can run:
 
-### Development mode
-
-`npm start`
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`npm start`  
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.  
 The page will reload when you make changes.
 
 ## Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Calc](https://tomwf-calc.netlify.app/)
 
-## My process
+## Built with
 
-### Built with
-
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-
-### Useful resources
-
-- [CSS Tricks - A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [Sass](https://sass-lang.com/documentation)
+- [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [React](https://reactjs.org/)
 
 ## Author
 
-- Website - [My Portfolio](https://www.your-site.com)
+- Website - [My Portfolio]()
