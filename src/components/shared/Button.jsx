@@ -1,15 +1,19 @@
-const Button = ({btnKey, classname='default'}) => {
+const Button = ({btnKey, classname='default', handleInput, id, value=btnKey}) => {
   
-  function handleKeydown(event) {
+  function handleMouseDown(event) {
     event.target.classList.add('pressed')
   }
 
-  function handleKeyup(event) {
+  function handleMouseUp(event) {
+    event.target.classList.remove('pressed')
+  }
+
+  function handleMouseLeave(event) {
     event.target.classList.remove('pressed')
   }
 
   return (
-    <button className={'btn ' + classname} onMouseDown={handleKeydown} onMouseUp={handleKeyup} onMouseLeave={handleKeyup}>
+    <button className={'btn ' + classname} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onMouseLeave={handleMouseLeave} onClick={(event) => handleInput(event, value)} id={id} value={value}>
       {btnKey}
     </button>
   )
