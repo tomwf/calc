@@ -311,7 +311,7 @@ main {
   border-radius: .5em;
   padding-right: 1.5em;
 
-  #label {
+  &__label {
     display: flex;
     justify-content: end;
     align-items: center;
