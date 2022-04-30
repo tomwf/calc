@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <div className="attribution">
+    <footer>
       Coded by <a href="#">tomwf</a>
-    </div>
+    </footer>
   )
 }
 
