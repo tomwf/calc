@@ -75,6 +75,11 @@ body {
   font-weight: 700;
 }
 
+footer {
+  padding-bottom: 1em;
+  text-align: center;
+}
+
 .app {
   @mixin theme(
     $main-color,
@@ -344,8 +349,4 @@ main {
   &:nth-child(17), &:nth-child(18) {
     grid-column-start: span 2;
   }
-}
-
-.attribution {
-  text-align: center;
 }
