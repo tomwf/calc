@@ -130,7 +130,7 @@ body {
         }
       }
 
-      &.equal {
+      &.equal, &.operation {
         background-color: $equal-button-color;
         box-shadow: 0 4px $equal-shadow-color;
         color: $equal-key-color;
