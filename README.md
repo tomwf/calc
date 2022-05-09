@@ -34,7 +34,7 @@ http://localhost:3000
 
 ## Link
 
-- Live Demo: [Calc](https://tomwf-calc.netlify.app/)
+Live Demo: [Calc](https://tomwf-calc.netlify.app/)
 
 ## Built with
 
