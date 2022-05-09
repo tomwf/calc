@@ -13,7 +13,7 @@ This is a simple calculator app in which the user can switch between 3 themes.
 ## How To Use
 
 ```bash
-https://github.com/tomwf/calc.git
+git clone https://github.com/tomwf/calc.git
 ```
 Navigate into the directory:
 ```bash
