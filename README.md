@@ -6,22 +6,35 @@ This is a simple calculator app in which the user can switch between 3 themes.
 
 ## Table of contents
 
-- [How to use](#how-to-use)
-- [Links](#links)
+- [How To Use](#how-to-use)
+- [Link](#link)
 - [Built with](#built-with)
-- [Author](#author)
 
-## How to use
+## How To Use
 
-In the project directory, you can run:
+```bash
+https://github.com/tomwf/calc.git
+```
+Navigate into the directory:
+```bash
+cd calc
+```
+Install the dependencies:
+```bash
+npm i
+```
+Run the local dev environment:
+```bash
+npm start
+```
+Open your browser and visit:
+```
+http://localhost:3000
+```
 
-`npm start`  
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.  
-The page will reload when you make changes.
+## Link
 
-## Links
-
-- Live Site URL: [Calc](https://tomwf-calc.netlify.app/)
+- Live Demo: [Calc](https://tomwf-calc.netlify.app/)
 
 ## Built with
 
@@ -29,7 +42,3 @@ The page will reload when you make changes.
 - [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [React](https://reactjs.org/)
-
-## Author
-
-- Website - [My Portfolio]()
